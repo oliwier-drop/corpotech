@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@300;400;500;600;700&display=swap');
+@import 'tailwindcss';
+@plugin 'flowbite/plugin';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+@source '../../node_modules/flowbite/**/*.js';
+
+@theme {
+    --font-sans: 'Host Grotesk', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+
+    /* Kolory marki */
+    --color-brand: #ff5500; /* International Orange */
+    --color-brand-dark: #000a2e; /* Midnight */
+}
+
+body {
+    font-family: var(--font-sans);
+}
+
+.link-arrow {
+    transition: transform 0.2s ease-out;
+    transform-origin: center;
+}
+
+.group:hover .link-arrow {
+    transform: rotateY(180deg);
+}

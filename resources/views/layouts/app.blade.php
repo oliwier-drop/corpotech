@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        @if(View::hasSection('title'))
+            <title>@yield('title') - {{ config('app.name') }}</title>
+            @else
+            <title>{{ config('app.name') }}</title>
+        @endif
+        <meta name="description" content="@yield('meta_description')">
+        <meta name="keywords" content="@yield('meta_keywords')">
+        <meta name="robots" content="@yield('meta_robots')">
+
+        @if(View::hasSection('title'))
+            <meta property="og:title" content="@yield('title') - {{ config('app.name') }}">
+            @else
+            <meta property="og:title" content="{{ config('app.name') }}">
+        @endif
+        <meta property="og:description" content="@yield('meta_description')">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="{{ url()->current() }}">
+        <meta property="og:site_name" content="{{ config('app.name') }}">
+
+        <!-- Favicons -->
+        <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <meta name="apple-mobile-web-app-title" content="MARPOL" />
+        <link rel="manifest" href="/site.webmanifest" />
+        <link rel="icon" href="/favicon.ico" />
+
+        <!-- Styles / Scripts -->
+        @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+    </head>
+    <body class="bg-gradient-to-br from-brand-dark to-black">
+
+        @include('partials.navbar')
+        @if (View::hasSection('header'))
+            <header>
+                @yield('header')
+            </header>
+        @endif
+
+        <main>
+            @yield('content')
+
+            @include('partials.cta')
+        </main>
+
+        
+        @include('partials.footer')
+
+        @include('partials.popup')
+
+        @stack('scripts')
+    </body>
+</html>
+
