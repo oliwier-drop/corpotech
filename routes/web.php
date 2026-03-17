@@ -21,10 +21,10 @@ Route::get('/uslugi', function () {
     return view('services');
 })->name('services');
 Route::get('uslugi/cyberbezpieczenstwo', function () {
-    return view('services.security');
+    return view('services.cybersecurity');
 })->name('security');
-Route::get('uslugi/systemy-teletechniczne', function () {
-    return view('services.systems');
+Route::get('uslugi/administracja-systemow', function () {
+    return view('services.administration');
 })->name('systems');
 Route::get('uslugi/smart-home', function () {
     return view('services.smarthome');
@@ -38,3 +38,4 @@ Route::get('uslugi/strony-internetowe', function () {
 Route::get('/kariera', function () {
     return view('career');
 })->name('career');
+

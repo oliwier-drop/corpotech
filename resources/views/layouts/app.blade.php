@@ -35,7 +35,7 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     </head>
-    <body class="bg-gradient-to-br from-brand-dark to-black">
+    <body>
 
         @include('partials.navbar')
         @if (View::hasSection('header'))
@@ -44,7 +44,7 @@
             </header>
         @endif
 
-        <main>
+        <main class="bg-gradient-to-br from-brand-dark to-black overflow-hidden">
             @yield('content')
 
             @include('partials.cta')

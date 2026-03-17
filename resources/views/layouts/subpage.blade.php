@@ -37,14 +37,22 @@
     </head>
     <body class="bg-white">
 
-@include('partials.navbar')
-        <main>
+        @include('partials.navbar')
+
+
+        @include('partials.hero')
+        
+        <main class="bg-gradient-to-br from-brand-dark to-black overflow-hidden">
             @yield('content')
 
+            @include('partials.cta')
         </main>
 
-        
+        @include('partials.footer')
 
+        @include('partials.popup')
+
+        @stack('scripts')
     </body>
 </html>
 
