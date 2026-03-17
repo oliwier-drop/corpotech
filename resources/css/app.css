@@ -30,3 +30,61 @@ body {
     transform: rotateY(180deg);
 }
 
+.team-carousel {
+    --team-gap: 1.5rem;
+    --team-visible-cards: 1;
+}
+
+.team-carousel-track {
+    display: flex;
+    gap: var(--team-gap);
+    transition: transform 450ms ease;
+    will-change: transform;
+}
+
+.team-carousel-card {
+    flex: 0 0 calc((100% - ((var(--team-visible-cards) - 1) * var(--team-gap))) / var(--team-visible-cards));
+}
+
+@media (min-width: 640px) {
+    .team-carousel {
+        --team-visible-cards: 2;
+    }
+}
+
+@media (min-width: 768px) {
+    .team-carousel {
+        --team-visible-cards: 3;
+    }
+}
+
+@media (min-width: 1024px) {
+    .team-carousel {
+        --team-visible-cards: 4;
+    }
+}
+
+.team-carousel-dot {
+    width: 0.625rem;
+    height: 0.625rem;
+    border-radius: 9999px;
+    background-color: rgb(107 114 128);
+    opacity: 0.8;
+    transition: all 200ms ease;
+}
+
+.team-carousel-dot:hover {
+    background-color: rgb(209 213 219);
+}
+
+.team-carousel-dot.is-active {
+    width: 1.5rem;
+    background-color: var(--color-brand);
+    opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .team-carousel-track {
+        transition: none;
+    }
+}

@@ -39,10 +39,10 @@
 
         @include('partials.navbar')
 
-
-        @include('partials.hero')
-        
         <main class="bg-gradient-to-br from-brand-dark to-black overflow-hidden">
+
+            @include('partials.hero')
+            
             @yield('content')
 
             @include('partials.cta')
