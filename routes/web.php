@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ContactControler;
+use App\Models\Post;
 
 Route::get('/', function () {
     return view('home');
@@ -12,11 +14,20 @@ Route::get('/kontakt', function () {
     return view('contact');
 })->name('contact');
 Route::get('/realizacje', function () {
-    return view('realizations');
-})->name('realizations');
-Route::get('/realizacje/{slug}', function ($slug) {
-    return view('realization-post', ['slug' => $slug]);
-})->name('realization-post');
+    $posts = Post::query()
+        ->latest()
+        ->limit(9)
+        ->get();
+
+    return view('projects', compact('posts'));
+})->name('projects');
+
+Route::get('/realizacje/{slug}', function (string $slug) {
+    $post = Post::query()->where('slug', $slug)->firstOrFail();
+
+    return view('project-post', compact('post'));
+})->name('post.show');
+
 Route::get('/uslugi', function () {
     return view('services');
 })->name('services');
@@ -35,7 +46,7 @@ Route::get('uslugi/instalacje-techniczne', function () {
 Route::get('uslugi/strony-internetowe', function () {
     return view('services.websites');
 })->name('websites');
-Route::get('/kariera', function () {
-    return view('career');
-})->name('career');
+
+
+Route::post('/kontakt/submit', [ContactControler::class, 'submit'])->name('contact.submit');
 

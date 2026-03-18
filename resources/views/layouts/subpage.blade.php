@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="csrf-token" content="{{ csrf_token() }}">
         @if(View::hasSection('title'))
             <title>@yield('title') - {{ config('app.name') }}</title>
             @else
@@ -18,6 +19,9 @@
             <meta property="og:title" content="{{ config('app.name') }}">
         @endif
         <meta property="og:description" content="@yield('meta_description')">
+        @if(View::hasSection('meta_og_image') && filled(trim(View::yieldContent('meta_og_image'))))
+            <meta property="og:image" content="@yield('meta_og_image')">
+        @endif
         <meta property="og:type" content="website">
         <meta property="og:url" content="{{ url()->current() }}">
         <meta property="og:site_name" content="{{ config('app.name') }}">
@@ -27,9 +31,11 @@
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <link rel="shortcut icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <meta name="apple-mobile-web-app-title" content="MARPOL" />
+        <meta name="apple-mobile-web-app-title" content="Corpotech" />
         <link rel="manifest" href="/site.webmanifest" />
-        <link rel="icon" href="/favicon.ico" />
+
+        <!-- Turnstile -->
+        <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 
         <!-- Styles / Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])

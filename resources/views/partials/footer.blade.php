@@ -30,8 +30,7 @@
           <li><a href="{{ route('home') }}" class="text-gray-400 hover:text-white transition">Strona główna</a></li>
           <li><a href="{{ route('about') }}" class="text-gray-400 hover:text-white transition">O nas</a></li>
           <li><a href="{{ route('services') }}" class="text-gray-400 hover:text-white transition">Usługi</a></li>
-          <li><a href="{{ route('realizations') }}" class="text-gray-400 hover:text-white transition">Realizacje</a></li>
-          <li><a href="{{ route('career') }}" class="text-gray-400 hover:text-white transition">Kariera</a></li>
+          <li><a href="{{ route('projects') }}" class="text-gray-400 hover:text-white transition">Realizacje</a></li>
         </ul>
       </div>
 

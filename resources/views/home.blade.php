@@ -1,16 +1,29 @@
 @extends('layouts.app')
 
-@section('meta_description')
-    Strona główna
-@endsection
-
-@section('meta_keywords')
-    Strona główna
-@endsection
+@section('meta_description', '')
+@section('meta_keywords', '')
+@section('meta_robots', 'index, follow')
 
 @section('content')
-<section id="hero" class="pt-20 sm:pt-32">
-    <div class="container mx-auto px-4">
+<section id="hero" class="relative h-screen overflow-hidden flex items-center">
+    <div class="absolute inset-0 z-0">
+        <video
+            src="/assets/videos/hero-video.mp4"
+            autoplay
+            muted
+            loop
+            playsinline
+            class="h-full w-full object-cover"
+            preload="metadata"
+            aria-hidden="true"
+        ></video>
+        <div class="absolute inset-0 bg-black/80"></div>
+    </div>
+
+    <div class="container mx-auto px-4 relative z-10">
+
+
+        
         <div class="text-gray-300 p-8 overflow-hidden md:rounded-lg md:p-10 lg:p-12">
 
             <p class="font-sans text-4xl font-bold text-white max-w-5xl lg:text-7xl lg:pr-24 md:text-6xl">
@@ -27,10 +40,17 @@
             </div>
         </div>
     </div>
+
+    <!-- Scroll Indicator -->
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
+        <div class="w-6 h-10 border-2 border-white rounded-full flex justify-center">
+            <div class="w-1 h-3 bg-white rounded-full mt-2 animate-bounce"></div>
+        </div>
+    </div>
 </section>
 <section id="about" class="py-20 sm:py-32">
     <div class="container mx-auto px-4">
-        <div class="h-32 md:h-40"></div>
+        
 
         <div class="grid gap-8 md:grid-cols-2">
             <div class="flex flex-col justify-center">
@@ -364,51 +384,32 @@
           <span class="text-gray-700">które w pełni odpowiadają potrzebom naszych klientów.</span></span>
         </p>
 
-        <div class="h-40"></div>
-
-        <div class="grid gap-8 md:grid-cols-3">
-            <div class="flex flex-col justify-center md:col-span-2">
-                <p
-                    class="self-start inline font-sans text-xl font-medium text-brand">
-                    Jak wygląda współpraca?
-                </p>
-                <h2 class="text-4xl font-bold text-gray-200">Proces od pierwszego kontaktu do wdrożenia</h2>
-                <div class="h-6"></div>
-                <p class="text-xl text-gray-400 md:pr-10">
-                    Każdy projekt zaczynamy od zrozumienia biznesu, a nie od technologii. Dzięki temu rozwiązania,
-                    które proponujemy, są dopasowane do skali Twojej organizacji, celów i realnych wyzwań.
-                </p>
-                <div class="h-8"></div>
-                <div class="grid gap-6 pt-8 border-t border-gray-800 lg:grid-cols-3">
-                    <div>
-                        <p class="font-semibold text-gray-200">1. Konsultacja</p>
-                        <div class="h-4"></div>
-                        <p class="text-gray-400">
-                            Podczas rozmowy i analizy zbieramy informacje o obecnej infrastrukturze, procesach
-                            i oczekiwaniach. Identyfikujemy obszary ryzyka oraz potencjał do usprawnień.
-                        </p>
-                    </div>
-                    <div>
-                        <p class="font-semibold text-gray-200">2. Wycena i zakres</p>
-                        <div class="h-4"></div>
-                        <p class="text-gray-400">
-                            Przygotowujemy propozycję architektury, rekomendacje technologiczne oraz harmonogram.
-                            Otrzymujesz przejrzysty zakres prac i koszty, bez „gwiazdek” w umowie.
-                        </p>
-                    </div>
-                    <div>
-                        <p class="font-semibold text-gray-200">3. Realizacja i wsparcie</p>
-                        <div class="h-4"></div>
-                        <p class="text-gray-400">
-                            Wdrażamy rozwiązanie, testujemy je i szkolimy zespół. Po zakończeniu projektu
-                            możemy przejąć opiekę serwisową oraz rozwijać środowisko wraz z Twoją firmą.
-                        </p>
-                    </div>
-                </div>
+        <div class="py-24 sm:py-32">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            
+            <h2 class="text-4xl font-bold text-gray-200 text-center">Nasze doświadczenie</h2>
+            <p class="text-xl text-gray-400 text-center mb-8">
+                Od 2011 roku pomagamy naszym klientom w rozwoju ich biznesu.
+            </p>
+            <dl class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 text-center sm:grid-cols-2 lg:max-w-none lg:grid-cols-4">
+            <div class="flex flex-col gap-y-2">
+                <dt class="text-base leading-7 text-brand">Satysfakcja klientów</dt>
+                <dd class="order-first text-4xl font-semibold tracking-tight text-gray-200 sm:text-5xl">98%</dd>
             </div>
-            <div>
-                <div class="-mr-24 rounded-lg md:rounded-l-full bg-gradient-to-br from-brand-dark to-brand/60 h-96"></div>
+            <div class="flex flex-col gap-y-2">
+                <dt class="text-base leading-7 text-brand">Lata na rynku</dt>
+                <dd class="order-first text-4xl font-semibold tracking-tight text-gray-200 sm:text-5xl">14+</dd>
             </div>
+            <div class="flex flex-col gap-y-2">
+                <dt class="text-base leading-7 text-brand">Zrealizowane projekty</dt>
+                <dd class="order-first text-4xl font-semibold tracking-tight text-gray-200 sm:text-5xl">150+</dd>
+            </div>
+            <div class="flex flex-col gap-y-2">
+                <dt class="text-base leading-7 text-brand">Szybki rozwój biznesu</dt>
+                <dd class="order-first text-4xl font-semibold tracking-tight text-gray-200 sm:text-5xl">320%</dd>
+            </div>
+            </dl>
+        </div>
         </div>
     </div>
 </section>
