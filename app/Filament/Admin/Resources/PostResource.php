@@ -90,9 +90,13 @@ class PostResource extends Resource
                 TextInput::make('title')
                     ->required()
                     ->maxLength(255)
-                    ->live()
+                    // Generuj slug dopiero po zakończeniu wpisywania (po wyjściu z pola),
+                    // żeby nie przerywać typowania.
+                    ->live(onBlur: true)
                     ->afterStateUpdated(function (callable $set, $state): void {
-                        $set('slug', Str::slug($state));
+                        if (filled($state)) {
+                            $set('slug', Str::slug($state));
+                        }
                     }),
 
                 TextInput::make('slug')

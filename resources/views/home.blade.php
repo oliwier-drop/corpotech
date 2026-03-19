@@ -88,8 +88,7 @@
                 </div>
             </div>
             <div>
-                    <div class="-mr-24 rounded-lg md:rounded-l-full bg-gradient-to-br from-brand-dark to-brand/60 h-96"></div>
-                </div>
+                <div class="hidden md:block -mr-24 rounded-lg md:rounded-l-full bg-gradient-to-br from-brand-dark to-brand/60 h-96"></div>
             </div>
         </div>
     </div>

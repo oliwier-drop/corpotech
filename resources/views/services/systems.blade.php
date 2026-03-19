@@ -5,8 +5,8 @@
 @section('breadcrumb_parent_url', route('services'))
 
 @section('content')
-<section id="description">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-10">
+<section id="description" class="py-12 sm:py-20">
+    <div class="container mx-auto px-4">
         <!-- Title -->
         <p
             class="self-start inline font-sans text-xl font-medium text-brand">
@@ -21,7 +21,7 @@
             <!--  -->
             <img class="md:w-[50%] w-full md:rounded-t-lg rounded-sm" src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHw1fHxob21lfGVufDB8MHx8fDE3MTA0OTAwNjl8MA&ixlib=rb-4.0.3&q=80&w=1080" alt="billboard image" />
 
-            <div class="md:w-[50%] w-full bg-gradient-to-br from-brand-dark to-brand/60 md:p-4 p-0 rounded-md">
+            <div class="md:w-[50%] w-full bg-gradient-to-br from-brand-dark to-brand/60 p-4 rounded-md">
                 <h2 class="text-3xl font-semibold text-white">Lorem ipsum dolor sit amet consectetur</h2>
                 <p class="text-md mt-4 text-gray-200">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore placeat assumenda nam
                 veritatis, magni doloremque pariatur quos fugit ipsa id voluptatibus deleniti officiis cum ratione eligendi
@@ -34,7 +34,7 @@
             <div
             class="xl:w-[80%] sm:w-[85%] w-[90%] mx-auto flex md:flex-row flex-col flex-col-reverse lg:gap-4 gap-2 justify-center lg:items-stretch md:items-center mt-6">
             <!--  -->
-            <div class="md:w-[50%] w-full bg-gradient-to-br from-brand/60 to-brand-dark md:p-4 p-0 rounded-md">
+            <div class="md:w-[50%] w-full bg-gradient-to-br from-brand/60 to-brand-dark p-4 rounded-md">
                 <h2 class="text-3xl font-semibold text-white">Lorem ipsum dolor sit amet consectetur</h2>
 
                 <p class="text-md mt-4 text-gray-200">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore placeat assumenda nam
@@ -50,12 +50,12 @@
     </div>
 </section>
 
-<section id="features" class="space-y-6 py-8 md:py-12 lg:py-24">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-10">
+<section id="features" class="space-y-6 py-12 sm:py-20">
+    <div class="container mx-auto px-4">
         <div class="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
             <h2 class="font-heading text-3xl font-bold leading-[1.1] text-white sm:text-3xl md:text-6xl">Zakres usług</h2>
         </div>
-        <div class="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-3">
+        <div class="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:grid-cols-3">
             <div class="relative overflow-hidden rounded-lg bg-brand-dark/60 p-2">
                 <div class="flex h-[180px] flex-col justify-between rounded-md p-6"><svg xmlns="http://www.w3.org/2000/svg"
                         width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -159,7 +159,7 @@
 
 @if(isset($recentInstallationPosts) && $recentInstallationPosts->isNotEmpty())
 <section id="last-installations">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-10">
+    <div class="container mx-auto px-4">
         
         <h2 class="text-4xl font-bold text-white text-center">Nasze ostatnie instalacje</h2>
             <div class="mt-8 grid grid-cols-1 gap-8 lg:grid-cols-2 xl:grid-cols-3">

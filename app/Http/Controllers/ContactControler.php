@@ -16,6 +16,7 @@ class ContactControler extends Controller
         $validated = $request->validate([
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'email', 'max:255'],
+            'phone' => ['nullable', 'string', 'max:50'],
             'textarea' => ['required', 'string', 'max:5000'],
             'cf-turnstile-response' => ['required', 'string'],
         ]);
@@ -46,7 +47,7 @@ class ContactControler extends Controller
                 new ContactMessage(
                     $validated['name'],
                     $validated['email'],
-                    null,
+                    $validated['phone'] ?? null,
                     $validated['textarea'],
                 )
             );

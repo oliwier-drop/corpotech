@@ -5,7 +5,6 @@ namespace App\Filament\Admin\Resources;
 use App\Filament\Admin\Resources\CategoryResource\Pages;
 use App\Models\Category;
 use Filament\Forms;
-use Filament\Forms\Components\ColorPicker;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -99,11 +98,6 @@ class CategoryResource extends Resource
                     ->maxLength(255)
                     ->unique(ignoreRecord: true)
                     ->hint('Używane w URL /kategoria/{slug}'),
-
-                ColorPicker::make('color')
-                    ->label('Kolor kategorii')
-                    ->nullable()
-                    ->formatStateUsing(fn ($state) => $state ?: '#0084ff'),
             ]);
     }
 
@@ -119,10 +113,6 @@ class CategoryResource extends Resource
                 TextColumn::make('slug')
                     ->searchable()
                     ->sortable(),
-
-                TextColumn::make('color')
-                    ->label('Kolor')
-                    ->badge(),
 
                 TextColumn::make('posts_count')
                     ->counts('posts')

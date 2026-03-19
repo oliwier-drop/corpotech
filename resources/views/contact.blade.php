@@ -50,172 +50,189 @@
                 </div>
             </div>
             <div>
-                <div class="-mr-24 rounded-lg md:rounded-l-full bg-gradient-to-br from-brand-dark to-brand/60 h-96"></div>
+                <div class="hidden md:block -mr-24 rounded-lg md:rounded-l-full bg-gradient-to-br from-brand-dark to-brand/60 h-96"></div>
             </div>
         </div>
     </div>
 </section>
 
 
-<section id="contact-form">
-    <div class="container mx-auto px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
-        <div class="mb-4">
-            <div class="mb-6 max-w-3xl text-center sm:text-center md:mx-auto md:mb-12">
-                <p class="text-base font-semibold uppercase tracking-wide text-brand">
-                    Kontakt
-                </p>
-                <h2
-                    class="font-heading mb-4 font-bold tracking-tight text-gray-900 dark:text-white text-3xl sm:text-5xl">
-                    Skontaktuj się z nami
-                </h2>
+<section id="contact-form" class="py-12 sm:py-20">
+    <div class="container mx-auto px-4">
+        
+        <div class="grid lg:grid-cols-2 grid-cols-1 items-stretch gap-y-6 lg:gap-x-6">
+            <div class="lg:mb-0 mb-10">
+                <div class="group w-full h-full overflow-hidden min-h-[520px] sm:min-h-[560px] lg:min-h-[420px]">
+                    
+                    <div class="relative h-full">
+                        <img
+                            src="{{ asset('assets/images/pictures/office.jpg') }}"
+                            alt="ContactUs tailwind section"
+                            class="w-full h-full lg:rounded-l-2xl rounded-2xl object-cover"
+                        />
+                        <div
+                            class="absolute inset-0 bg-black/60 lg:rounded-l-2xl rounded-2xl z-0"
+                        ></div>
+                        <h1 class="text-white text-4xl font-bold leading-10 absolute top-6 left-6 sm:top-8 sm:left-8 lg:top-11 lg:left-11 z-30">
+                            Skontaktuj się z nami
+                        </h1>
+                        <div class="absolute bottom-0 w-full lg:p-11 p-4 z-20">
+                            <div class="bg-brand-dark rounded-lg p-6 block">
+                                <a href="tel:+48662273737" class="flex items-center mb-6 text-brand">
+                                    <svg
+                                        width="30"
+                                        height="30"
+                                        viewBox="0 0 30 30"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M22.3092 18.3098C22.0157 18.198 21.8689 18.1421 21.7145 18.1287C21.56 18.1154 21.4058 18.1453 21.0975 18.205L17.8126 18.8416C17.4392 18.9139 17.2525 18.9501 17.0616 18.9206C16.8707 18.891 16.7141 18.8058 16.4008 18.6353C13.8644 17.2551 12.1853 15.6617 11.1192 13.3695C10.9964 13.1055 10.935 12.9735 10.9133 12.8017C10.8917 12.6298 10.9218 12.4684 10.982 12.1456L11.6196 8.72559C11.6759 8.42342 11.7041 8.27233 11.6908 8.12115C11.6775 7.96998 11.6234 7.82612 11.5153 7.5384L10.6314 5.18758C10.37 4.49217 10.2392 4.14447 9.95437 3.94723C9.6695 3.75 9.29804 3.75 8.5551 3.75H5.85778C4.58478 3.75 3.58264 4.8018 3.77336 6.06012C4.24735 9.20085 5.64674 14.8966 9.73544 18.9853C14.0295 23.2794 20.2151 25.1426 23.6187 25.884C24.9335 26.1696 26.0993 25.1448 26.0993 23.7985V21.2824C26.0993 20.5428 26.0993 20.173 25.9034 19.8888C25.7076 19.6046 25.362 19.4729 24.6708 19.2096L22.3092 18.3098Z"
+                                            stroke="currentColor"
+                                            stroke-width="2"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        />
+                                    </svg>
+                                    <h5 class="text-white text-base font-normal leading-6 ml-5">+48 662 273 737</h5>
+                                </a>
+
+                                <a href="mailto:kontakt@corpotech.com.pl" class="flex items-center mb-6 text-brand">
+                                    <svg
+                                        width="30"
+                                        height="30"
+                                        viewBox="0 0 30 30"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M2.81501 8.75L10.1985 13.6191C12.8358 15.2015 14.1544 15.9927 15.6032 15.9582C17.0519 15.9237 18.3315 15.0707 20.8905 13.3647L27.185 8.75M12.5 25H17.5C22.214 25 24.5711 25 26.0355 23.5355C27.5 22.0711 27.5 19.714 27.5 15C27.5 10.286 27.5 7.92893 26.0355 6.46447C24.5711 5 22.214 5 17.5 5H12.5C7.78595 5 5.42893 5 3.96447 6.46447C2.5 7.92893 2.5 10.286 2.5 15C2.5 19.714 2.5 22.0711 3.96447 23.5355C5.42893 25 7.78595 25 12.5 25Z"
+                                            stroke="currentColor"
+                                            stroke-width="2"
+                                            stroke-linecap="round"
+                                        />
+                                    </svg>
+                                    <h5 class="text-white text-base font-normal leading-6 ml-5">kontakt@corpotech.com.pl</h5>
+                                </a>
+
+                                <a href="https://maps.app.goo.gl/P1vnpYuSDKYEAd2U7" class="flex items-center text-brand">
+                                    <svg
+                                        width="30"
+                                        height="30"
+                                        viewBox="0 0 30 30"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M25 12.9169C25 17.716 21.1939 21.5832 18.2779 24.9828C16.8385 26.6609 16.1188 27.5 15 27.5C13.8812 27.5 13.1615 26.6609 11.7221 24.9828C8.80612 21.5832 5 17.716 5 12.9169C5 10.1542 6.05357 7.5046 7.92893 5.55105C9.8043 3.59749 12.3478 2.5 15 2.5C17.6522 2.5 20.1957 3.59749 22.0711 5.55105C23.9464 7.5046 25 10.1542 25 12.9169Z"
+                                            stroke="currentColor"
+                                            stroke-width="2"
+                                        />
+                                        <path
+                                            d="M17.5 11.6148C17.5 13.0531 16.3807 14.219 15 14.219C13.6193 14.219 12.5 13.0531 12.5 11.6148C12.5 10.1765 13.6193 9.01058 15 9.01058C16.3807 9.01058 17.5 10.1765 17.5 11.6148Z"
+                                            stroke="currentColor"
+                                            stroke-width="2"
+                                        />
+                                    </svg>
+                                    <h5 class="text-white text-base font-normal leading-6 ml-5">Tadeusza Kościuszki 5, 62-400 Słupca</h5>
+                                </a> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="flex items-stretch justify-center">
-            <div class="grid md:grid-cols-2">
-                <div class="h-full pr-6">
-                    <p class="mt-3 mb-12 text-lg text-gray-600 dark:text-slate-400">
-                        Masz pytania? Potrzebujesz szczegółów dotyczących naszych usług? Napisz do nas!
+
+            <div class="bg-gradient-to-br from-brand-dark to-brand/60 p-5 sm:p-6 lg:p-11 lg:rounded-r-2xl rounded-2xl h-full">
+                @if(session('success'))
+                    <p class="mb-4 rounded-lg bg-emerald-500/10 px-4 py-2 text-sm text-emerald-400">
+                        {{ session('success') }}
                     </p>
-                    <ul class="mb-6 md:mb-0">
-                        <li class="flex">
-                            <div class="flex h-10 w-10 items-center justify-center rounded bg-brand text-gray-50">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" class="h-6 w-6">
-                                    <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"></path>
-                                    <path
-                                        d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z">
-                                    </path>
-                                </svg>
-                            </div>
-                            <div class="ml-4 mb-4">
-                                <h3 class="mb-2 text-lg font-medium leading-6 text-gray-900 dark:text-white">Adres
-                                </h3>
-                                <p class="text-gray-600 dark:text-slate-400">Tadeusza Kościuszki 5,</p>
-                                <p class="text-gray-600 dark:text-slate-400">62-400 Słupca</p>
-                            </div>
-                        </li>
-                        <li class="flex">
-                            <div class="flex h-10 w-10 items-center justify-center rounded bg-brand text-gray-50">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" class="h-6 w-6">
-                                    <path
-                                        d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2">
-                                    </path>
-                                    <path d="M15 7a2 2 0 0 1 2 2"></path>
-                                    <path d="M15 3a6 6 0 0 1 6 6"></path>
-                                </svg>
-                            </div>
-                            <div class="ml-4 mb-4">
-                                <h3 class="mb-2 text-lg font-medium leading-6 text-gray-900 dark:text-white">Telefon
-                                </h3>
-                                <p class="text-gray-600 dark:text-slate-400">Mobilny: +48 662 273 737</p>
-                                <p class="text-gray-600 dark:text-slate-400">Stacjonarny: +48 662 273 737</p>
-                            </div>
-                        </li>
-                        <li class="flex">
-                            <div class="flex h-10 w-10 items-center justify-center rounded bg-brand text-gray-50">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" class="h-6 w-6">
-                                    <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path>
-                                    <path d="M12 7v5l3 3"></path>
-                                </svg>
-                            </div>
-                            <div class="ml-4 mb-4">
-                                <h3 class="mb-2 text-lg font-medium leading-6 text-gray-900 dark:text-white">Godziny otwarcia
-                                </h3>
-                                <p class="text-gray-600 dark:text-slate-400">Poniedziałek - Piątek: 10:00 - 16:00</p>
-                                <p class="text-gray-600 dark:text-slate-400">Sobota &amp; Niedziela: Zamknięte</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="card h-fit max-w-6xl p-5 md:p-12" id="form">
-                    <h2 class="mb-4 text-2xl font-bold dark:text-white">Formularz kontaktowy</h2>
+                @endif
 
-                    @if(session('success'))
-                        <p class="mb-4 rounded-lg bg-emerald-500/10 px-4 py-2 text-sm text-emerald-400">
-                            {{ session('success') }}
-                        </p>
-                    @endif
+                <form id="contactForm" method="POST" action="{{ route('contact.submit') }}">
+                    @csrf
 
-                    <form id="contactForm" method="POST" action="{{ route('contact.submit') }}">
-                        @csrf
-                        <div class="mb-6">
-                            <div class="mx-0 mb-1 sm:mb-4">
-                                <div class="mx-0 mb-1 sm:mb-4">
-                                    <label for="name" class="pb-1 text-xs uppercase tracking-wider">Imię i nazwisko</label>
-                                    <input
-                                        type="text"
-                                        id="name"
-                                        name="name"
-                                        autocomplete="given-name"
-                                        placeholder="Imię i nazwisko"
-                                        value="{{ old('name') }}"
-                                        required
-                                        class="mb-2 w-full rounded-md border border-gray-400 bg-transparent py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"
-                                    >
-                                    @error('name')
-                                        <p class="mb-2 text-xs text-red-600">{{ $message }}</p>
-                                    @enderror
-                                </div>
-                                <div class="mx-0 mb-1 sm:mb-4">
-                                    <label for="email" class="pb-1 text-xs uppercase tracking-wider">Adres e-mail</label>
-                                    <input
-                                        type="email"
-                                        id="email"
-                                        name="email"
-                                        autocomplete="email"
-                                        placeholder="E-mail"
-                                        value="{{ old('email') }}"
-                                        required
-                                        class="mb-2 w-full rounded-md border border-gray-400 bg-transparent py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"
-                                    >
-                                    @error('email')
-                                        <p class="mb-2 text-xs text-red-600">{{ $message }}</p>
-                                    @enderror
-                                </div>
-                            </div>
-                            <div class="mx-0 mb-1 sm:mb-4">
-                                <label for="textarea" class="pb-1 text-xs uppercase tracking-wider">Wiadomość</label>
-                                <textarea
-                                    id="textarea"
-                                    name="textarea"
-                                    cols="30"
-                                    rows="5"
-                                    placeholder="Napisz do nas..."
-                                    required
-                                    class="mb-2 w-full rounded-md border border-gray-400 bg-transparent py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"
-                                >{{ old('textarea') }}</textarea>
-                                @error('textarea')
-                                    <p class="mb-2 text-xs text-red-600">{{ $message }}</p>
-                                @enderror
-                            </div>
-                        </div>
+                    <h2 class="text-white text-4xl font-semibold leading-10 mb-11">
+                        Formularz kontaktowy
+                    </h2>
 
-                        {{-- Cloudflare Turnstile --}}
-                        <div class="w-full min-w-0 overflow-hidden pt-2 @error('cf-turnstile-response') text-red-600 @enderror">
-                            <div
-                                class="cf-turnstile max-w-full"
-                                data-sitekey="{{ env('TURNSTILE_SITE_KEY') }}"
-                                data-theme="light"
-                                data-size="flexible"
-                            ></div>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        autocomplete="given-name"
+                        placeholder="Imię i nazwisko"
+                        value="{{ old('name') }}"
+                        required
+                        class="w-full h-12 text-gray-600 placeholder-gray-400 shadow-sm bg-transparent text-lg font-normal leading-7 rounded-lg border border-gray-200 focus:outline-none pl-4 mb-6"
+                    >
+                    @error('name')
+                        <p class="mb-2 text-xs text-red-600">{{ $message }}</p>
+                    @enderror
 
-                            @error('cf-turnstile-response')
-                                <p class="mt-2 text-xs text-red-600">{{ $message }}</p>
-                            @enderror
-                        </div>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        autocomplete="email"
+                        placeholder="Email"
+                        value="{{ old('email') }}"
+                        required
+                        class="w-full h-12 text-gray-600 placeholder-gray-400 shadow-sm bg-transparent text-lg font-normal leading-7 rounded-lg border border-gray-200 focus:outline-none pl-4 mb-6"
+                    >
+                    @error('email')
+                        <p class="mb-2 text-xs text-red-600">{{ $message }}</p>
+                    @enderror
 
-                        <div class="text-center">
-                            <button type="submit" class="w-full bg-brand hover:bg-orange-800 text-white px-6 py-3 font-xl rounded-md sm:mb-0">
-                                Wyślij
-                            </button>
-                        </div>
-                    </form>
-                </div>
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        autocomplete="tel"
+                        placeholder="Telefon (opcjonalnie)"
+                        value="{{ old('phone') }}"
+                        class="w-full h-12 text-gray-600 placeholder-gray-400 shadow-sm bg-transparent text-lg font-normal leading-7 rounded-lg border border-gray-200 focus:outline-none pl-4 mb-6"
+                    >
+                    @error('phone')
+                        <p class="mb-2 text-xs text-red-600">{{ $message }}</p>
+                    @enderror
+
+                    <textarea
+                        id="textarea"
+                        name="textarea"
+                        rows="5"
+                        placeholder="Message"
+                        required
+                        class="w-full text-gray-600 placeholder-gray-400 bg-transparent text-lg font-normal leading-7 rounded-lg border border-gray-200 focus:outline-none pl-4 pr-4 py-2 mb-6"
+                    >{{ old('textarea') }}</textarea>
+                    @error('textarea')
+                        <p class="mb-2 text-xs text-red-600">{{ $message }}</p>
+                    @enderror
+
+                    <div class="w-full min-w-0 overflow-hidden pt-2 @error('cf-turnstile-response') text-red-600 @enderror">
+                        <input type="hidden" name="cf-turnstile-response" id="cf-turnstile-response"
+                            value="{{ old('cf-turnstile-response') }}">
+                        <div
+                            class="cf-turnstile max-w-full"
+                            data-sitekey="{{ env('TURNSTILE_SITE_KEY') }}"
+                            data-theme="light"
+                            data-size="flexible"
+                            data-callback="onTurnstileVerified"
+                            data-expired-callback="onTurnstileExpired"
+                        ></div>
+
+                        @error('cf-turnstile-response')
+                            <p class="mt-2 text-xs text-red-600">{{ $message }}</p>
+                        @enderror
+                    </div>
+
+                    <button
+                        type="submit"
+                        class="w-full h-12 text-white text-base font-semibold leading-6 rounded-full transition-all  bg-brand-dark hover:bg-slate-950 shadow-sm mt-6"
+                    >
+                        Wyślij
+                    </button>
+                </form>
             </div>
         </div>
     </div>
@@ -247,6 +264,18 @@
 @push('scripts')
 <script>
 document.addEventListener('DOMContentLoaded', () => {
+    // Turnstile callbacks must be global because Turnstile triggers them from outside our scope.
+    // Still, the easiest way is to define them on `window`.
+    window.onTurnstileVerified = function (token) {
+        const input = document.getElementById('cf-turnstile-response');
+        if (input) input.value = token;
+    };
+
+    window.onTurnstileExpired = function () {
+        const input = document.getElementById('cf-turnstile-response');
+        if (input) input.value = '';
+    };
+
     const form = document.getElementById('contactForm');
     if (!form) return;
 
