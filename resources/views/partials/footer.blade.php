@@ -31,6 +31,7 @@
           <li><a href="{{ route('about') }}" class="text-gray-400 hover:text-white transition">O nas</a></li>
           <li><a href="{{ route('services') }}" class="text-gray-400 hover:text-white transition">Usługi</a></li>
           <li><a href="{{ route('projects') }}" class="text-gray-400 hover:text-white transition">Realizacje</a></li>
+          <li><a href="{{ route('contact') }}" class="text-gray-400 hover:text-white transition">Kontakt</a></li>
         </ul>
       </div>
 
@@ -38,11 +39,11 @@
       <div class="space-y-4">
         <h3 class="text-lg font-semibold">Usługi</h3>
         <ul class="space-y-2">
-          <li><a href="/uslugi/cyberbezpieczenstwo" class="text-gray-400 hover:text-white transition">Cyberbezpieczeństwo</a></li>
-          <li><a href="/uslugi/administracja-systemow" class="text-gray-400 hover:text-white transition">Administracja systemów</a></li>
-          <li><a href="/uslugi/strony-internetowe" class="text-gray-400 hover:text-white transition">Strony internetowe</a></li>
-          <li><a href="/uslugi/smart-home" class="text-gray-400 hover:text-white transition">Smart home</a></li>
-          <li><a href="/uslugi/instalacje-techniczne" class="text-gray-400 hover:text-white transition">Instalacje techniczne</a></li>
+          <li><a href="{{ route('cybersecurity') }}" class="text-gray-400 hover:text-white transition">Cyberbezpieczeństwo</a></li>
+          <li><a href="{{ route('systems') }}" class="text-gray-400 hover:text-white transition">Administracja systemów</a></li>
+          <li><a href="{{ route('websites') }}" class="text-gray-400 hover:text-white transition">Strony internetowe</a></li>
+          <li><a href="{{ route('smarthome') }}" class="text-gray-400 hover:text-white transition">Smart home</a></li>
+          <li><a href="{{ route('installations') }}" class="text-gray-400 hover:text-white transition">Instalacje techniczne</a></li>
         </ul>
       </div>
 
@@ -75,8 +76,8 @@
     <div class="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center">
       <p class="text-gray-500 text-sm mb-4 md:mb-0">&copy; {{ now()->year }} Grupa Corpotech Sp. z o.o. Wszelkie prawa zastrzeżone.</p>
       <div class="flex space-x-6">
-        <a href="/polityka-prywatnosci" class="text-gray-500 hover:text-white text-sm transition">Polityka prywatności</a>
-        <a href="/regulamin" class="text-gray-500 hover:text-white text-sm transition">Regulamin</a>
+        <a href="{{ route('privacy-policy') }}" class="text-gray-500 hover:text-white text-sm transition">Polityka prywatności</a>
+        <a href="{{ route('terms-of-service') }}" class="text-gray-500 hover:text-white text-sm transition">Regulamin</a>
       </div>
     </div>
   </div>

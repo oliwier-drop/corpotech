@@ -27,6 +27,10 @@ class AdminPanelProvider extends PanelProvider
             ->id('admin')
             ->path('admin')
             ->login()
+            ->brandName('Corpotech')
+            ->brandLogo(asset('assets/images/logo/logo.png'))
+            ->darkModeBrandLogo(asset('assets/images/logo/logo.png'))
+            ->brandLogoHeight('2.5rem')
             ->colors([
                 'primary' => Color::Amber,
             ])

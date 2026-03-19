@@ -8,11 +8,11 @@
                     Strona główna
                 </a>
             </li>
-            @if(isset($breadcrumb_parent) && isset($breadcrumb_parent_url))
+            @if(View::hasSection('breadcrumb_parent') && View::hasSection('breadcrumb_parent_url'))
             <li>
                 <div class="flex items-center space-x-1.5">
                     <svg class="w-3.5 h-3.5 rtl:rotate-180 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7"/></svg>
-                    <a href="{{ $breadcrumb_parent_url }}" class="text-base font-medium text-white hover:text-fg-brand">{{ $breadcrumb_parent }}</a>
+                    <a href="@yield('breadcrumb_parent_url')" class="text-base font-medium text-white hover:text-fg-brand">@yield('breadcrumb_parent')</a>
                 </div>
             </li>
             @endif

@@ -94,6 +94,11 @@ class RoleResource extends Resource
                             'permissions.create' => 'Uprawnienia: tworzenie',
                             'permissions.edit' => 'Uprawnienia: edycja',
                             'permissions.delete' => 'Uprawnienia: usuwanie',
+
+                            'categories.view' => 'Kategorie usług: podgląd',
+                            'categories.create' => 'Kategorie usług: tworzenie',
+                            'categories.edit' => 'Kategorie usług: edycja',
+                            'categories.delete' => 'Kategorie usług: usuwanie',
                             default => $permission->name,
                         };
                     }),

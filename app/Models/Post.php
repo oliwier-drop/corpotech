@@ -9,6 +9,7 @@ class Post extends Model
     protected $fillable = [
         'title',
         'slug',
+        'user_id',
         'content',
         'excerpt',
         'image_path',
@@ -17,4 +18,14 @@ class Post extends Model
         'meta_keywords',
         'meta_robots',
     ];
+
+    public function categories()
+    {
+        return $this->belongsToMany(Category::class);
+    }
+
+    public function author()
+    {
+        return $this->belongsTo(User::class, 'user_id');
+    }
 }

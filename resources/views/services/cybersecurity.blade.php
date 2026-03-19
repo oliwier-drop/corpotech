@@ -1,6 +1,6 @@
 @extends('layouts.subpage')
 
-@section('title', 'Instalacje techniczne')
+@section('title', 'Cyberbezpieczeństwo')
 @section('breadcrumb_parent', 'Usługi')
 @section('breadcrumb_parent_url', route('services'))
 
@@ -10,7 +10,7 @@
         <!-- Title -->
         <p
             class="self-start inline font-sans text-xl font-medium text-brand">
-            Instalacje techniczne
+            Cyberbezpieczeństwo
         </p>
         <h2 class="text-4xl font-bold text-white">Co dokładnie robimy?</h2>
 

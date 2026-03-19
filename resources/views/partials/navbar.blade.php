@@ -30,14 +30,14 @@
             <ul class="flex flex-col mt-4 font-medium md:flex-row md:mt-0 md:space-x-8 rtl:space-x-reverse">
                 
                 <li>
-                    <a href="{{ url('/o-nas') }}"
+                    <a href="{{ route('about') }}"
                         class="block py-2 px-3 text-xl text-white hover:text-brand border-b border-transparent hover:bg-neutral-secondary-soft md:hover:bg-transparent md:border-0 md:hover:text-brand md:p-0">
                         O nas
                     </a>
                 </li>
                 <li>
                     <a
-                        href="{{ url('/uslugi') }}"
+                        href="{{ route('services') }}"
                         id="mega-menu-services-button"
                         class="flex items-center justify-between w-full py-2 px-3 font-medium text-xl text-white border-b border-transparent md:w-auto hover:bg-neutral-secondary-soft hover:text-brand md:hover:bg-transparent md:border-0 md:hover:text-brand md:p-0"
                         role="button"
@@ -63,22 +63,22 @@
                         </svg>
                     </a>
                     <ul class="flex flex-col pl-4 mt-1 space-y-1 md:hidden">
-                        <li><a href="{{ url('/uslugi/cyberbezpieczenstwo') }}" class="block py-1.5 px-3 text-base text-gray-300 hover:text-brand transition">Cyberbezpieczeństwo</a></li>
-                        <li><a href="{{ url('/uslugi/administracja-systemow') }}" class="block py-1.5 px-3 text-base text-gray-300 hover:text-brand transition">Administracja systemów</a></li>
-                        <li><a href="{{ url('/uslugi/strony-internetowe') }}" class="block py-1.5 px-3 text-base text-gray-300 hover:text-brand transition">Strony internetowe</a></li>
-                        <li><a href="{{ url('/uslugi/smart-home') }}" class="block py-1.5 px-3 text-base text-gray-300 hover:text-brand transition">Smart home</a></li>
-                        <li><a href="{{ url('/uslugi/instalacje-techniczne') }}" class="block py-1.5 px-3 text-base text-gray-300 hover:text-brand transition">Instalacje techniczne</a></li>
+                        <li><a href="{{ route('cybersecurity') }}" class="block py-1.5 px-3 text-base text-gray-300 hover:text-brand transition">Cyberbezpieczeństwo</a></li>
+                        <li><a href="{{ route('systems') }}" class="block py-1.5 px-3 text-base text-gray-300 hover:text-brand transition">Administracja systemów</a></li>
+                        <li><a href="{{ route('websites') }}" class="block py-1.5 px-3 text-base text-gray-300 hover:text-brand transition">Strony internetowe</a></li>
+                        <li><a href="{{ route('smarthome') }}" class="block py-1.5 px-3 text-base text-gray-300 hover:text-brand transition">Smart home</a></li>
+                        <li><a href="{{ route('installations') }}" class="block py-1.5 px-3 text-base text-gray-300 hover:text-brand transition">Instalacje techniczne</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="{{ url('/realizacje') }}"
+                    <a href="{{ route('projects') }}"
                         class="block py-2 px-3 text-xl text-white hover:text-brand border-b border-transparent hover:bg-neutral-secondary-soft md:hover:bg-transparent md:border-0 md:hover:text-brand md:p-0">
                         Realizacje
                     </a>
                 </li>
                 
                 <li>
-                    <a href="{{ url('/kontakt') }}"
+                    <a href="{{ route('contact') }}"
                         class="block py-2 px-3 text-xl text-white hover:text-brand border-b border-transparent hover:bg-neutral-secondary-soft md:hover:bg-transparent md:border-0 md:hover:text-brand md:p-0">
                         Kontakt
                     </a>
@@ -92,7 +92,7 @@
         <div class="grid max-w-screen-xl px-4 py-5 mx-auto text-sm text-white md:grid-cols-3 md:px-6 gap-6">
             <ul class="space-y-3 md:col-span-2" aria-labelledby="mega-menu-services-button">
                 <li>
-                    <a href="{{ url('/uslugi/cyberbezpieczenstwo') }}"
+                    <a href="{{ route('cybersecurity') }}"
                        class="service-link inline-flex items-center hover:text-brand group"
                        data-title="Cyberbezpieczeństwo"
                        data-description="Zaawansowane systemy ochrony sieci, danych i infrastruktury IT Twojej firmy.">
@@ -117,7 +117,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{ url('/uslugi/systemy-teletechniczne') }}"
+                    <a href="{{ route('systems') }}"
                        class="service-link inline-flex items-center hover:text-brand group"
                        data-title="Administracja systemów"
                        data-description="Obserwacja i administrowanie systemami IT w Twojej organizacji.">
@@ -142,7 +142,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{ url('/uslugi/strony-internetowe') }}"
+                    <a href="{{ route('websites') }}"
                        class="service-link inline-flex items-center hover:text-brand group"
                        data-title="Strony internetowe"
                        data-description="Nowoczesne i szybkie strony WWW dopasowane do potrzeb Twojego biznesu.">
@@ -167,7 +167,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{ url('/uslugi/smart-home') }}"
+                    <a href="{{ route('smarthome') }}"
                        class="service-link inline-flex items-center hover:text-brand group"
                        data-title="Smart home"
                        data-description="Inteligentne systemy automatyki domowej zwiększające komfort i bezpieczeństwo.">
@@ -192,7 +192,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{ url('/uslugi/instalacje-techniczne') }}"
+                    <a href="{{ route('installations') }}"
                        class="service-link inline-flex items-center hover:text-brand group"
                        data-title="Instalacje techniczne"
                        data-description="Profesjonalne instalacje elektryczne i niskoprądowe w obiektach komercyjnych i mieszkalnych.">

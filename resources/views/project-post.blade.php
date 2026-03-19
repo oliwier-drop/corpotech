@@ -1,6 +1,8 @@
 @extends('layouts.subpage')
 
 @section('title', $post->title)
+@section('breadcrumb_parent', 'Realizacje')
+@section('breadcrumb_parent_url', route('projects'))
 
 @section('meta_description', $post->meta_description ?? $post->excerpt ?? $post->title)
 @section('meta_keywords', $post->meta_keywords ?? '')
@@ -24,8 +26,9 @@
             ->map(fn ($t) => ltrim(trim((string) $t), '#'))
             ->filter()
             ->values();
-        $inTags = $tags->take(2);
-        $authorName = $post->author ?? 'Corpotech';
+        $authorName = $post->author?->name ?? 'Corpotech';
+        $publishedDate = $post->created_at?->format('Y-m-d') ?? '-';
+        $categoryNames = $post->categories->pluck('name')->join(', ');
     @endphp
 
     <div class="pb-16">
@@ -35,7 +38,7 @@
             </h1>
 
             {{-- Zdjęcie w ramce --}}
-            <div class="max-w-5xl mx-auto">
+            <div class="max-w-6xl mx-auto">
                 <div class="overflow-hidden rounded-3xl border border-white/10 shadow-sm">
                     <img
                         src="{{ $heroImage }}"
@@ -47,39 +50,14 @@
             </div>
 
             {{-- Treść posta --}}
-            <div class="max-w-5xl mx-auto mt-8">
+            <div class="max-w-6xl mx-auto mt-8">
                 <div class="text-white">
                     <div class="p-6 sm:p-10">
-                        <p class="text-white/90 text-xs mt-0">
-                            Written By:
-                            <a
-                                href="#"
-                                class="text-white font-medium hover:text-gray-200 transition duration-500 ease-in-out"
-                            >
-                                {{ $authorName }}
-                            </a>
-                            In
-                            @if($inTags->isNotEmpty())
-                                @foreach($inTags as $inTag)
-                                    <a
-                                        href="#"
-                                        class="text-xs text-white font-medium hover:text-gray-200 transition duration-500 ease-in-out"
-                                    >
-                                        {{ $inTag }}
-                                    </a>
-                                    @unless($loop->last)
-                                        <span class="text-xs text-white/50">,</span>
-                                    @endunless
-                                @endforeach
-                            @else
-                                <a
-                                    href="#"
-                                    class="text-xs text-white font-medium hover:text-gray-200 transition duration-500 ease-in-out"
-                                >
-                                    Article
-                                </a>
-                            @endif
-                        </p>
+                        <div class="mb-6 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-white/90">
+                            <span>Autor: <span class="font-medium text-white">{{ $authorName }}</span></span>
+                            <span>Data: <span class="font-medium text-white">{{ $publishedDate }}</span></span>
+                            <span>Kategoria: <span class="font-medium text-white">{{ $categoryNames ?: 'Bez kategorii' }}</span></span>
+                        </div>
 
                         <article
                             class="max-w-none text-white
@@ -101,25 +79,46 @@
                             {!! $post->content !!}
                         </article>
 
-                        @if($tags->isNotEmpty())
-                            <div class="mt-4 flex flex-wrap gap-x-2 gap-y-2 items-center">
-                                @foreach($tags as $tag)
-                                    <a
-                                        href="#"
-                                        class="text-xs text-white font-medium hover:text-gray-200 transition duration-500 ease-in-out"
-                                    >
-                                        #{{ $tag }}
-                                    </a>
-                                    @unless($loop->last)
-                                        <span class="text-xs text-white/50">,</span>
-                                    @endunless
-                                @endforeach
-                            </div>
-                        @endif
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    @if(isset($recentPosts) && $recentPosts->isNotEmpty())
+        <section id="last-projects" class="px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-10">
+            <div class="mb-12 text-center">
+                <h2 class="mb-4 text-3xl font-bold text-brand sm:text-4xl">Ostatnie realizacje</h2>
+            </div>
+
+            <div class="grid grid-cols-1 gap-8 lg:grid-cols-2 xl:grid-cols-4">
+                @foreach($recentPosts as $post)
+                    <a href="{{ route('post.show', ['slug' => $post->slug]) }}" class="group block overflow-hidden rounded-xl bg-brand-dark shadow-md transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl">
+                        <img
+                            src="{{ $post->image_path ? asset('storage/' . $post->image_path) : asset('assets/images/team/placeholder.png') }}"
+                            alt="{{ $post->title }}"
+                            class="h-52 w-full object-cover">
+                        <div class="p-6">
+                            <span class="mb-3 inline-flex rounded-full bg-brand px-3 py-1 text-xs font-semibold uppercase tracking-wide text-white">
+                                {{ $post->categories->pluck('name')->join(', ') ?: 'Bez kategorii' }}
+                            </span>
+                            <h3 class="mb-3 text-2xl font-bold leading-tight text-white transition-colors duration-200 group-hover:text-gray-200">
+                                {{ $post->title }}
+                            </h3>
+                            <p class="mb-5 text-base leading-relaxed text-gray-200">
+                                {{ $post->excerpt ?? \Illuminate\Support\Str::limit(strip_tags($post->content ?? ''), 160) }}
+                            </p>
+                            <div class="text-sm text-gray-200">
+                                <span>Data: {{ $post->created_at?->format('Y-m-d') }}</span>
+                                <span class="ml-3">Autor: {{ $post->author?->name }}</span>
+                            </div>
+                        </div>
+                    </a>
+                @endforeach
+            </div>
+            </div>
+        </section>
+    @endif
 @endsection
 
