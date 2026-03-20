@@ -7,6 +7,7 @@ use App\Models\Post;
 use App\Models\User;
 use Illuminate\Auth\Events\Verified;
 use Illuminate\Http\Request;
+use App\Http\Controllers\SitemapController;
 
 Route::get('/', function () {
     return view('home');
@@ -64,6 +65,8 @@ Route::get('/regulamin', function () {
 
 
 Route::post('/kontakt/submit', [ContactControler::class, 'submit'])->name('contact.submit');
+
+Route::get('/sitemap.xml', [SitemapController::class, 'index'])->name('sitemap');
 
 Route::get('/email/verify/{id}/{hash}', function (Request $request, string $id, string $hash) {
     if (! $request->hasValidSignature()) {

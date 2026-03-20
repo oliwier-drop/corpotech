@@ -1,2 +1,19 @@
 User-agent: *
-Disallow:
+
+# Panel administracyjny Filament (nie do indeksowania)
+Disallow: /admin
+Disallow: /admin/login
+Disallow: /login
+Disallow: /register
+Disallow: /panel
+Disallow: /cart
+Disallow: /checkout
+Disallow: /404
+Disallow: /405
+Disallow: /errors/
+
+# Wymuś indeksowanie pozostałych podstron (reszta jest dozwolona domyślnie)
+Allow: /
+
+# Mapa strony dla robotów
+Sitemap: https://corpotech.com.pl/sitemap.xml
