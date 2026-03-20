@@ -2,8 +2,11 @@
 
 @section('title', 'Usługi')
 
-@section('meta_description', 'Usługi')
-@section('meta_keywords', 'Usługi')
+@section('meta_description', 'Oferta usług IT: cyberbezpieczeństwo, administracja systemów (Windows i Linux), strony internetowe, Smart Home oraz instalacje niskoprądowe i LAN. Sprawdź zakres.')
+@section('meta_keywords', 'cyberbezpieczeństwo, audyty bezpieczeństwa, testy penetracyjne, phishing, ransomware, administracja systemów, administracja serwerów, Microsoft Windows, Linux, Active Directory, Exchange, Postfix, bazy danych, strony internetowe, SEO, hosting, Smart Home, automatyka domowa, instalacje niskoprądowe, okablowanie strukturalne, LAN, szafy RACK, patch panel')
+@section('meta_title', 'Usługi - Corpotech')
+@section('meta_image', asset('assets/images/logo/logo.png'))
+@section('meta_og_image', asset('assets/images/logo/logo.png'))
 @section('meta_robots', 'index, follow')
 
 @section('content')
@@ -31,7 +34,7 @@
                             Cyberbezpieczeństwo
                             </h2>
                             <p class="mt-4 text-lg text-gray-300">
-                                Oferujemy kompleksowe usługi w zakresie cyberbezpieczeństwa, obejmujące m.in. audyty bezpieczeństwa, wdrażanie zabezpieczeń sieciowych, ochronę przed atakami hakerskimi oraz szkolenia dla pracowników. Pomagamy chronić Twoje dane, infrastrukturę IT oraz zapewniamy bezpieczeństwo cyfrowe Twojej firmy.
+                                Zapewniamy cyberbezpieczeństwo na każdym etapie: audyty bezpieczeństwa, wdrażanie zabezpieczeń sieciowych oraz ochronę przed phishingiem i ransomware. Pomagamy też przygotować organizację do reagowania na incydenty i utrzymać bezpieczeństwo środowiska IT.
                             </p>
                             <div class="mt-6">
                                 <a class="inline-flex rounded-lg bg-brand px-4 py-1.5 text-base font-semibold leading-7 text-white shadow-sm ring-1 ring-brand transition hover:opacity-90"
@@ -44,7 +47,7 @@
                 </div>
                 <div>
                     <div class="relative">
-                        <img loading="lazy" width="647" height="486"
+                        <img alt="Cyberbezpieczeństwo - ochrona systemów i sieci" loading="lazy" width="647" height="486"
                             class="w-full rounded-xl object-cover shadow-2xl ring-1 ring-white/10"
                             style="color:transparent" src="{{ asset('assets/images/pictures/cybersecurity.jpg') }}">
                     </div>
@@ -74,7 +77,7 @@
                                 Administracja systemów
                             </h2>
                             <p class="mt-4 text-lg text-gray-300">
-                                Oferujemy kompleksowe usługi w zakresie administracji systemów, obejmujące m.in. instalację i konfigurację systemów operacyjnych, baz danych, serwerów oraz sieci. Pomagamy zarządzać Twoją infrastrukturą IT oraz zapewniamy stabilność i bezpieczeństwo Twojej firmy.
+                                Administrujemy infrastrukturą IT: instalujemy i konfigurujemy systemy operacyjne, serwery, bazy danych oraz elementy sieci. Prowadzimy bieżące utrzymanie, monitoring i optymalizacje, aby zapewnić stabilność, wydajność i bezpieczeństwo.
                             </p>
                             <div class="mt-6">
                                 <a class="inline-flex rounded-lg bg-brand px-4 py-1.5 text-base font-semibold leading-7 text-white shadow-sm ring-1 ring-brand transition hover:opacity-90"
@@ -87,7 +90,7 @@
                 </div>
                 <div class="lg:row-start-1">
                     <div class="relative">
-                        <img alt="Inbox user interface" loading="lazy" width="647" height="486"
+                        <img alt="Administracja systemów i serwerownia" loading="lazy" width="647" height="486"
                             class="w-full rounded-xl object-cover shadow-xl ring-1 ring-white/10"
                             style="color:transparent" src="{{ asset('assets/images/pictures/server-room.jpg') }}">
                     </div>
@@ -117,7 +120,7 @@
                                 Strony internetowe
                             </h2>
                             <p class="mt-4 text-lg text-gray-300">
-                                Oferujemy kompleksowe usługi w zakresie tworzenia stron internetowych, obejmujące m.in. projektowanie, programowanie, hosting oraz utrzymanie stron internetowych. Pomagamy zapewnić Twojej firmy obecność w Internecie oraz zwiększyć jej知名度.
+                                Tworzymy strony internetowe i serwisy WWW dopasowane do Twoich celów biznesowych. Realizujemy projektowanie, programowanie, hosting i utrzymanie, dbając o szybkość, bezpieczeństwo oraz wymagania SEO. Dzięki temu Twoja marka jest widoczna w wyszukiwarkach i gotowa na rozwój.
                             </p>
                             <div class="mt-6">
                                 <a class="inline-flex rounded-lg bg-brand px-4 py-1.5 text-base font-semibold leading-7 text-white shadow-sm ring-1 ring-brand transition hover:opacity-90"
@@ -130,7 +133,7 @@
                 </div>
                 <div>
                     <div class="relative">
-                        <img loading="lazy" width="646" height="485"
+                        <img alt="Tworzenie stron internetowych" loading="lazy" width="646" height="485"
                             class="w-full rounded-xl object-cover shadow-2xl ring-1 ring-white/10"
                             style="color:transparent"
                             src="{{ asset('assets/images/pictures/websites.jpg') }}">
@@ -159,7 +162,7 @@
                                 Smart Home
                             </h2>
                             <p class="mt-4 text-lg text-gray-300">
-                                Oferujemy kompleksowe usługi w zakresie instalacji i konfiguracji systemów smart home, obejmujące m.in. instalację i konfigurację systemów smart home, baz danych, serwerów oraz sieci. Pomagamy zarządzać Twoją infrastrukturą IT oraz zapewniamy stabilność i bezpieczeństwo Twojej firmy.
+                                Projektujemy i wdrażamy inteligentne systemy Smart Home, które zwiększają komfort i bezpieczeństwo w domu oraz pomagają ograniczyć koszty energii. Umożliwiamy zdalne sterowanie oświetleniem, ogrzewaniem i monitoringiem oraz tworzymy automatyzacje dopasowane do codziennych nawyków.
                             </p>
                             <div class="mt-6">
                                 <a class="inline-flex rounded-lg bg-brand px-4 py-1.5 text-base font-semibold leading-7 text-white shadow-sm ring-1 ring-brand transition hover:opacity-90"
@@ -172,7 +175,7 @@
                 </div>
                 <div class="lg:row-start-1">
                     <div class="relative">
-                        <img alt="Inbox user interface" loading="lazy" width="647" height="486"
+                        <img alt="Systemy Smart Home - automatyka domowa" loading="lazy" width="647" height="486"
                             class="w-full rounded-xl object-cover shadow-xl ring-1 ring-white/10"
                             style="color:transparent" src="{{ asset('assets/images/pictures/smarthome.jpg') }}">
                     </div>
@@ -200,7 +203,7 @@
                                 Instalacje techniczne
                             </h2>
                             <p class="mt-4 text-lg text-gray-300">
-                                Oferujemy kompleksowe usługi w zakresie instalacji i konfiguracji systemów smart home, obejmujące m.in. instalację i konfigurację systemów smart home, baz danych, serwerów oraz sieci. Pomagamy zarządzać Twoją infrastrukturą IT oraz zapewniamy stabilność i bezpieczeństwo Twojej firmy.
+                                Realizujemy instalacje techniczne związane z automatyką domową: montaż i konfigurację urządzeń, przygotowanie okablowania oraz uruchomienie systemu. Wykonujemy instalacje tak, aby były niezawodne, estetyczne i gotowe do późniejszej rozbudowy Smart Home.
                             </p>
                             <div class="mt-6">
                                 <a class="inline-flex rounded-lg bg-brand px-4 py-1.5 text-base font-semibold leading-7 text-white shadow-sm ring-1 ring-brand transition hover:opacity-90"
@@ -213,7 +216,7 @@
                 </div>
                 <div>
                     <div class="relative">
-                        <img loading="lazy" width="646" height="485"
+                        <img alt="Instalacje techniczne i montaż automatyki domowej" loading="lazy" width="646" height="485"
                             class="w-full rounded-xl object-cover shadow-2xl ring-1 ring-white/10"
                             style="color:transparent"
                             src="{{ asset('assets/images/pictures/installations.jpg') }}">

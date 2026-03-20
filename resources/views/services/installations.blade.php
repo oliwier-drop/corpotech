@@ -4,6 +4,13 @@
 @section('breadcrumb_parent', 'Usługi')
 @section('breadcrumb_parent_url', route('services'))
 
+@section('meta_description', 'Realizujemy instalacje techniczne związane z automatyką domową: montaż i konfigurację urządzeń, przygotowanie okablowania oraz uruchomienie systemu. Wykonujemy instalacje tak, aby były niezawodne, estetyczne i gotowe do późniejszej rozbudowy Smart Home.')
+@section('meta_keywords', 'Instalacje techniczne, montaż automatyki domowej, przygotowanie okablowania, uruchomienie systemu, Smart Home')
+@section('meta_title', 'Instalacje techniczne - montaż automatyki domowej')
+@section('meta_image', asset('assets/images/pictures/installations.jpg'))
+
+@section('meta_robots', 'index, follow')
+
 @section('content')
 <section id="description" class="py-12 sm:py-20">
     <div class="container mx-auto px-4">
@@ -19,14 +26,15 @@
             <div
             class="xl:w-[80%] sm:w-[85%] w-[90%] mx-auto flex md:flex-row flex-col lg:gap-4 gap-2 justify-center lg:items-stretch md:items-center mt-4">
             <!--  -->
-            <img class="md:w-[50%] w-full md:rounded-t-lg rounded-sm" src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHw1fHxob21lfGVufDB8MHx8fDE3MTA0OTAwNjl8MA&ixlib=rb-4.0.3&q=80&w=1080" alt="billboard image" />
+            <img class="md:w-[50%] w-full md:rounded-t-lg rounded-sm" src="{{ asset('assets/images/pictures/installations.jpg') }}" alt="Instalacje techniczne - montaż automatyki domowej" />
 
             <div class="md:w-[50%] w-full bg-gradient-to-br from-brand-dark to-brand/60 p-4 rounded-md">
-                <h2 class="text-3xl font-semibold text-white">Lorem ipsum dolor sit amet consectetur</h2>
-                <p class="text-md mt-4 text-gray-200">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore placeat assumenda nam
-                veritatis, magni doloremque pariatur quos fugit ipsa id voluptatibus deleniti officiis cum ratione eligendi
-                sed necessitatibus aliquam error laborum delectus quaerat. Delectus hic error eligendi sed repellat natus fuga
-                nobis tempora possimus ullam!</p>
+                <h2 class="text-3xl font-semibold text-white">Instalacje niskoprądowe w firmach</h2>
+                <p class="text-lg mt-4 text-gray-200">
+                    Kładziemy okablowanie strukturalne i tworzymy solidną bazę pod infrastrukturę IT oraz systemy bezpieczeństwa.
+                    Wykonujemy trasy kablowe, montujemy szafy RACK i patch panele, przygotowujemy punkty logiczne oraz uruchamiamy LAN
+                    wraz z testami i pomiarami. Dzięki temu instalacja jest uporządkowana, przewidywalna i gotowa do dalszej rozbudowy.
+                </p>
             </div>
 
             </div>
@@ -35,15 +43,16 @@
             class="xl:w-[80%] sm:w-[85%] w-[90%] mx-auto flex md:flex-row flex-col flex-col-reverse lg:gap-4 gap-2 justify-center lg:items-stretch md:items-center mt-6">
             <!--  -->
             <div class="md:w-[50%] w-full bg-gradient-to-br from-brand/60 to-brand-dark p-4 rounded-md">
-                <h2 class="text-3xl font-semibold text-white">Lorem ipsum dolor sit amet consectetur</h2>
+                <h2 class="text-3xl font-semibold text-white">Konfiguracja, uruchomienie i systemy dostępu</h2>
 
-                <p class="text-md mt-4 text-gray-200">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore placeat assumenda nam
-                veritatis, magni doloremque pariatur quos fugit ipsa id voluptatibus deleniti officiis cum ratione eligendi
-                sed necessitatibus aliquam error laborum delectus quaerat. Delectus hic error eligendi sed repellat natus fuga
-                nobis tempora possimus ullam!</p>
+                <p class="text-lg mt-4 text-gray-200">
+                    Integrujemy instalacje niskoprądowe z systemami dostępu i konfigurujemy usługi pod potrzeby firmy.
+                    Sprawdzamy działanie połączeń, wykonujemy testy oraz dopasowujemy ustawienia, aby całość działała stabilnie i bez zakłóceń.
+                    Na koniec przekazujemy dokumentację i wspieramy w rozwoju infrastruktury, gdy firma będzie potrzebować zmian.
+                </p>
             </div>
             <!--  -->
-            <img class="md:w-[50%] w-full md:rounded-t-lg rounded-sm" src="https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwxMXx8aG9tZXxlbnwwfDB8fHwxNzEwNDkwMDcwfDA&ixlib=rb-4.0.3&q=80&w=1080" alt="billboard image" />
+            <img class="md:w-[50%] w-full md:rounded-t-lg rounded-sm" src="{{ asset('assets/images/pictures/installations-2.jpg') }}" alt="Instalacje techniczne - montaż automatyki domowej" />
 
             </div>
         </div>
@@ -52,16 +61,19 @@
 
 <section id="features" class="space-y-6 py-12 sm:py-20">
     <div class="container mx-auto px-4">
-        <div class="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
-            <h2 class="font-heading text-3xl font-bold leading-[1.1] text-white sm:text-3xl md:text-6xl">Zakres usług</h2>
+    <div class="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
+            <h2 class="text-4xl font-bold text-white mb-8">Zakres usług</h2>
         </div>
         <div class="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:grid-cols-3">
             <div class="relative overflow-hidden rounded-lg bg-brand-dark/60 p-2">
                 <div class="flex h-[180px] flex-col justify-between rounded-md p-6"><svg xmlns="http://www.w3.org/2000/svg"
                         width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-terminal text-brand">
-                        <polyline points="4 17 10 11 4 5"></polyline>
-                        <line x1="12" y1="19" x2="20" y2="19"></line>
+                        stroke-linecap="round" stroke-linejoin="round" class="lucide text-brand">
+                        <rect x="3" y="7" width="18" height="13" rx="2"></rect>
+                        <path d="M7 7l1.5-2h7L17 7"></path>
+                        <circle cx="7.5" cy="13.5" r="1"></circle>
+                        <circle cx="12" cy="13.5" r="1"></circle>
+                        <circle cx="16.5" cy="13.5" r="1"></circle>
                     </svg>
                     <div class="space-y-2">
                         <h3 class="font-bold text-white">Instalacje niskopradowe i LAN</h3>
@@ -72,12 +84,10 @@
             <div class="relative overflow-hidden rounded-lg bg-gradient-to-br from-brand-dark to-brand/60 p-2">
                 <div class="flex h-[180px] flex-col justify-between rounded-md p-6"><svg xmlns="http://www.w3.org/2000/svg"
                         width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-grid text-brand">
-                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                        <line x1="3" y1="9" x2="21" y2="9"></line>
-                        <line x1="3" y1="15" x2="21" y2="15"></line>
-                        <line x1="9" y1="3" x2="9" y2="21"></line>
-                        <line x1="15" y1="3" x2="15" y2="21"></line>
+                        stroke-linecap="round" stroke-linejoin="round" class="lucide text-brand">
+                        <rect x="5" y="11" width="14" height="10" rx="2"></rect>
+                        <path d="M9 11V7a3 3 0 0 1 6 0v4"></path>
+                        <path d="M12 16v1"></path>
                     </svg>
                     <div class="space-y-2">
                         <h3 class="font-bold text-white">Kontrola dostepu</h3>
@@ -88,16 +98,13 @@
             <div class="relative overflow-hidden rounded-lg bg-brand-dark/60 p-2">
                 <div class="flex h-[180px] flex-col justify-between rounded-md p-6"><svg xmlns="http://www.w3.org/2000/svg"
                         width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sliders-horizontal text-brand">
-                        <line x1="21" y1="4" x2="14" y2="4"></line>
-                        <line x1="10" y1="4" x2="3" y2="4"></line>
-                        <line x1="21" y1="12" x2="12" y2="12"></line>
-                        <line x1="8" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="20" x2="16" y2="20"></line>
-                        <line x1="12" y1="20" x2="3" y2="20"></line>
-                        <line x1="14" y1="2" x2="14" y2="6"></line>
-                        <line x1="8" y1="10" x2="8" y2="14"></line>
-                        <line x1="16" y1="18" x2="16" y2="22"></line>
+                        stroke-linecap="round" stroke-linejoin="round" class="lucide text-brand">
+                        <line x1="4" y1="21" x2="4" y2="14"></line>
+                        <line x1="12" y1="21" x2="12" y2="10"></line>
+                        <line x1="20" y1="21" x2="20" y2="6"></line>
+                        <circle cx="4" cy="12" r="2"></circle>
+                        <circle cx="12" cy="9" r="2"></circle>
+                        <circle cx="20" cy="5" r="2"></circle>
                     </svg>
                     <div class="space-y-2">
                         <h3 class="font-bold text-white">Sterowniki i automatyka obiektowa</h3>
@@ -108,10 +115,10 @@
             <div class="relative overflow-hidden rounded-lg bg-gradient-to-br from-brand-dark to-brand/60 p-2">
                 <div class="flex h-[180px] flex-col justify-between rounded-md p-6"><svg xmlns="http://www.w3.org/2000/svg"
                         width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-minus text-brand">
-                        <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path>
-                        <polyline points="14 2 14 8 20 8"></polyline>
-                        <line x1="9" y1="15" x2="15" y2="15"></line>
+                        stroke-linecap="round" stroke-linejoin="round" class="lucide text-brand">
+                        <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+                        <path d="M9 15h6"></path>
+                        <path d="M12 10v5"></path>
                     </svg>
                     <div class="space-y-2">
                         <h3 class="font-bold text-white">Bramy, szlabany i napedy</h3>
@@ -122,11 +129,10 @@
             <div class="relative overflow-hidden rounded-lg bg-brand-dark/60 p-2">
                 <div class="flex h-[180px] flex-col justify-between rounded-md p-6"><svg xmlns="http://www.w3.org/2000/svg"
                         width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-input text-brand">
-                        <path d="M4 22h14a2 2 0 0 0 2-2V7.5L14.5 2H6a2 2 0 0 0-2 2v4"></path>
-                        <polyline points="14 2 14 8 20 8"></polyline>
-                        <path d="M2 15h10"></path>
-                        <path d="m9 18 3-3-3-3"></path>
+                        stroke-linecap="round" stroke-linejoin="round" class="lucide text-brand">
+                        <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                        <path d="M7 9h10"></path>
+                        <circle cx="12" cy="14" r="2"></circle>
                     </svg>
                     <div class="space-y-2">
                         <h3 class="font-bold text-white">Czytniki, kontrolery i rejestracja</h3>
@@ -137,14 +143,12 @@
             <div class="relative overflow-hidden rounded-lg bg-gradient-to-br from-brand-dark to-brand/60 p-2">
                 <div class="flex h-[180px] flex-col justify-between rounded-md p-6"><svg xmlns="http://www.w3.org/2000/svg"
                         width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-palette text-brand">
-                        <circle cx="13.5" cy="6.5" r=".5"></circle>
-                        <circle cx="17.5" cy="10.5" r=".5"></circle>
-                        <circle cx="8.5" cy="7.5" r=".5"></circle>
-                        <circle cx="6.5" cy="12.5" r=".5"></circle>
-                        <path
-                            d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h 1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z">
-                        </path>
+                        stroke-linecap="round" stroke-linejoin="round" class="lucide text-brand">
+                        <path d="M14.5 7.5l2 2"></path>
+                        <path d="M4 20l6.5-6.5"></path>
+                        <path d="M13.5 10.5l6.5-6.5"></path>
+                        <path d="M2 22l2-2"></path>
+                        <circle cx="16" cy="8" r="2"></circle>
                     </svg>
                     <div class="space-y-2">
                         <h3 class="font-bold text-white">Utrzymanie, serwis i rozbudowa</h3>
@@ -164,7 +168,7 @@
         <h2 class="text-4xl font-bold text-white text-center">Nasze ostatnie instalacje</h2>
             <div class="mt-8 grid grid-cols-1 gap-8 lg:grid-cols-2 xl:grid-cols-3">
                 @foreach($recentInstallationPosts as $post)
-                    <a href="{{ route('post.show', ['slug' => $post->slug]) }}" class="group block overflow-hidden rounded-xl bg-brand-dark shadow-md transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl">
+                    <a href="{{ route('post.show', ['slug' => $post->slug]) }}" class="group block overflow-hidden rounded-xl bg-brand-dark/60 shadow-md transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl">
                         <img
                             src="{{ $post->image_path ? asset('storage/' . $post->image_path) : asset('assets/images/team/placeholder.png') }}"
                             alt="{{ $post->title }}"

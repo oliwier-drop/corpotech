@@ -1,8 +1,11 @@
 @extends('layouts.app')
 
-@section('meta_description', '')
-@section('meta_keywords', '')
-@section('meta_robots', 'index, follow')
+    @section('meta_description', 'Corpotech oferuje usługi IT dla firm i domu: cyberbezpieczeństwo, administrację systemów i serwerów, strony internetowe i SEO, Smart Home oraz instalacje niskoprądowe i sieci LAN. Sprawdź zakres realizacji.')
+    @section('meta_keywords', 'cyberbezpieczeństwo, audyt bezpieczeństwa, testy penetracyjne, administracja systemów, serwery, Windows, Linux, Active Directory, Exchange, Postfix, bazy danych, strony internetowe, SEO, hosting, Smart Home, automatyka domowa, instalacje niskoprądowe, okablowanie strukturalne, LAN')
+    @section('meta_title', 'Corpotech - Nowoczesne rozwiązania dla Twojego biznesu i domu')
+    @section('meta_image', asset('assets/images/logo/logo.png'))
+    @section('meta_og_image', asset('assets/images/logo/logo.png'))
+    @section('meta_robots', 'index, follow')
 
 @section('content')
 <section id="hero" class="relative h-screen overflow-hidden flex items-center">
@@ -390,7 +393,7 @@
             <p class="text-xl text-gray-400 text-center mb-8">
                 Od 2011 roku pomagamy naszym klientom w rozwoju ich biznesu.
             </p>
-            <dl class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 text-center sm:grid-cols-2 lg:max-w-none lg:grid-cols-4">
+            <dl id="experience-stats" class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 text-center sm:grid-cols-2 lg:max-w-none lg:grid-cols-4">
             <div class="flex flex-col gap-y-2">
                 <dt class="text-base leading-7 text-brand">Satysfakcja klientów</dt>
                 <dd class="order-first text-4xl font-semibold tracking-tight text-gray-200 sm:text-5xl">98%</dd>
@@ -527,6 +530,57 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     });
+
+    // Animacja liczników w sekcji "Nasze doświadczenie"
+    const experienceStats = document.getElementById('experience-stats');
+    if (experienceStats) {
+        const counterEls = Array.from(experienceStats.querySelectorAll('dd'));
+        const duration = 1800; // ms
+        let started = false;
+
+        const parseCounter = (el) => {
+            const text = (el.textContent || '').trim();
+            const value = parseInt(text.replace(/[^0-9]/g, ''), 10);
+            const suffix = text.replace(/[0-9]/g, '');
+            return { value: Number.isFinite(value) ? value : 0, suffix };
+        };
+
+        const animateCounters = () => {
+            if (started) return;
+            started = true;
+
+            const counters = counterEls.map((el) => {
+                const { value, suffix } = parseCounter(el);
+                return { el, target: value, suffix, startedAt: null };
+            });
+
+            const start = performance.now();
+            const easeOutCubic = (t) => 1 - Math.pow(1 - t, 3);
+
+            const tick = (now) => {
+                const elapsed = now - start;
+                const progress = Math.min(1, elapsed / duration);
+                const eased = easeOutCubic(progress);
+
+                counters.forEach((c) => {
+                    const current = Math.round(c.target * eased);
+                    c.el.textContent = String(current) + c.suffix;
+                });
+
+                if (progress < 1) requestAnimationFrame(tick);
+            };
+
+            requestAnimationFrame(tick);
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) animateCounters();
+            });
+        }, { threshold: 0.25 });
+
+        observer.observe(experienceStats);
+    }
 });
 </script>
 @endpush

@@ -67,7 +67,7 @@
             <svg class="w-5 h-5 text-gray-500 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
               <path fill="currentColor" d="M6.62 4.06a1.5 1.5 0 0 1 2.12 0l1.76 1.76a1.5 1.5 0 0 1 .18 1.94L9.86 9.7a.75.75 0 0 0-.08.78 7.01 7.01 0 0 0 3.54 3.54.75.75 0 0 0 .78-.08l1.94-1.82a1.5 1.5 0 0 1 1.94.18l1.76 1.76a1.5 1.5 0 0 1 0 2.12l-1.18 1.18c-.7.7-1.72 1.02-2.7.82a13.5 13.5 0 0 1-8.21-4.71 13.5 13.5 0 0 1-2.78-5.1c-.2-.98.12-2 .82-2.7Z" />
             </svg>
-            <a href="tel:+48662273737" class="hover:text-white transition">+48 662 273 737</a>
+            <a href="tel:+48662273737" class="hover:text-white transition">+48 573 296 093</a>
           </p>
         </address>
       </div>

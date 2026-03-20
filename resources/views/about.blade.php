@@ -1,9 +1,12 @@
 @extends('layouts.subpage')
 
 @section('title', 'O nas')
-@section('description', 'Poznaj zespół Corpotech')  
-@section('meta_description', 'O nas')
-@section('meta_keywords', 'O nas')
+ 
+@section('meta_description', 'Corpotech to zespół, który dostarcza usługi IT w podejściu biznesowym: odpowiedzialne doradztwo, cyberbezpieczeństwo w centrum oraz długofalowa opieka po wdrożeniu. Wspieramy firmy w codziennej pracy dzięki monitoringowi, ciągłości działania i realnemu wsparciu.')
+@section('meta_keywords', 'o nas, Corpotech, doradztwo IT, cyberbezpieczeństwo, audyt bezpieczeństwa, monitoring, ciągłość działania, wsparcie IT, bezpieczeństwo infrastruktury, opieka serwisowa')
+@section('meta_title', 'O nas - Corpotech')
+@section('meta_image', asset('assets/images/pictures/about.jpg'))
+@section('meta_og_image', asset('assets/images/logo/logo.png'))
 @section('meta_robots', 'index, follow')
 
 @section('content')

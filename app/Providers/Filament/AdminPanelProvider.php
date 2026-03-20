@@ -28,7 +28,7 @@ class AdminPanelProvider extends PanelProvider
             ->path('admin')
             ->login()
             ->brandName('Admin Panel')
-            ->brandLogo(asset('assets/images/logo/logo.png'))
+            ->brandLogo(asset('assets/images/logo/logo-dark-mode.png'))
             ->darkModeBrandLogo(asset('assets/images/logo/logo.png'))
             ->brandLogoHeight('2.5rem')
             ->colors([
@@ -41,7 +41,7 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->discoverWidgets(in: app_path('Filament/Admin/Widgets'), for: 'App\\Filament\\Admin\\Widgets')
             ->widgets([
-                Widgets\AccountWidget::class,
+                \App\Filament\Admin\Widgets\UserAccountWidget::class,
                 Widgets\FilamentInfoWidget::class,
             ])
             ->middleware([

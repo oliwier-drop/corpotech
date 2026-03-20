@@ -2,8 +2,11 @@
 
 @section('title', 'Realizacje')
 
-@section('meta_description', 'Realizacje')
-@section('meta_keywords', 'Realizacje')
+@section('meta_description', 'Zobacz nasze realizacje: wdrożenia IT dla firm i domów, projekty z zakresu infrastruktury sieciowej, cyberbezpieczeństwa, stron internetowych oraz instalacji niskoprądowych i Smart Home. Sprawdź efekty naszych prac.')
+@section('meta_keywords', 'realizacje, wdrożenia IT, infrastruktura sieciowa, cyberbezpieczeństwo, testy penetracyjne, audyt bezpieczeństwa, strony internetowe, SEO, hosting, Smart Home, automatyka domowa, instalacje niskoprądowe, okablowanie strukturalne, LAN, sieci komputerowe')
+@section('meta_title', 'Realizacje - Corpotech')
+@section('meta_image', asset('assets/images/logo/logo.png'))
+@section('meta_og_image', asset('assets/images/logo/logo.png'))
 @section('meta_robots', 'index, follow')
 
 @section('content')
@@ -19,7 +22,7 @@
 
             <div class="grid grid-cols-1 gap-8 lg:grid-cols-2 xl:grid-cols-4">
                 @forelse($posts as $post)
-                    <a href="{{ route('post.show', ['slug' => $post->slug]) }}" class="group block overflow-hidden rounded-xl bg-brand-dark shadow-md transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl">
+                    <a href="{{ route('post.show', ['slug' => $post->slug]) }}" class="group block overflow-hidden rounded-xl bg-brand-dark/60 shadow-md transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl">
                         <img
                             src="{{ $post->image_path ? asset('storage/' . $post->image_path) : asset('assets/images/team/placeholder.png') }}"
                             alt="{{ $post->title }}"

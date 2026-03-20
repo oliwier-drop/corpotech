@@ -6,6 +6,8 @@
 
 @section('meta_description', $post->meta_description ?? $post->excerpt ?? $post->title)
 @section('meta_keywords', $post->meta_keywords ?? '')
+@section('meta_title', $post->title . ' - Corpotech')
+@section('meta_image', $post->image_path ? asset('storage/' . $post->image_path) : asset('assets/images/logo/logo.png'))
 @section('meta_robots', $post->meta_robots ?? 'index, follow')
 
 @php
@@ -94,7 +96,7 @@
 
             <div class="grid grid-cols-1 gap-8 lg:grid-cols-2 xl:grid-cols-4">
                 @foreach($recentPosts as $post)
-                    <a href="{{ route('post.show', ['slug' => $post->slug]) }}" class="group block overflow-hidden rounded-xl bg-brand-dark shadow-md transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl">
+                    <a href="{{ route('post.show', ['slug' => $post->slug]) }}" class="group block overflow-hidden rounded-xl bg-brand-dark/60 shadow-md transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl">
                         <img
                             src="{{ $post->image_path ? asset('storage/' . $post->image_path) : asset('assets/images/team/placeholder.png') }}"
                             alt="{{ $post->title }}"

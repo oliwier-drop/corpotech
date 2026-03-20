@@ -2,8 +2,11 @@
 
 @section('title', 'Kontakt')
 
-@section('meta_description', 'Kontakt')
-@section('meta_keywords', 'Kontakt')
+@section('meta_description', 'Skontaktuj się z Corpotech w sprawie usług IT: cyberbezpieczeństwo, administracja systemów, strony internetowe, Smart Home i instalacje niskoprądowe. Zadzwoń: +48 662 273 737 lub napisz: kontakt@corpotech.com.pl. Słupca, ul. Tadeusza Kościuszki 5.')
+@section('meta_keywords', 'kontakt IT, Corpotech, cyberbezpieczeństwo Słupca, audyt bezpieczeństwa, testy penetracyjne, administracja systemów Windows Linux, sieci LAN, strony internetowe, SEO, Smart Home, instalacje niskoprądowe, okablowanie strukturalne, kontakt@corpotech.com.pl, +48 662 273 737')
+@section('meta_title', 'Kontakt - Corpotech')
+@section('meta_image', asset('assets/images/logo/logo.png'))
+@section('meta_og_image', asset('assets/images/logo/logo.png'))
 @section('meta_robots', 'index, follow')
 
 @section('content')
@@ -94,7 +97,7 @@
                                             stroke-linejoin="round"
                                         />
                                     </svg>
-                                    <h5 class="text-white text-base font-normal leading-6 ml-5">+48 662 273 737</h5>
+                                    <h5 class="text-white text-base font-normal leading-6 ml-5">+48 573 296 093</h5>
                                 </a>
 
                                 <a href="mailto:kontakt@corpotech.com.pl" class="flex items-center mb-6 text-brand">
@@ -203,7 +206,7 @@
                         rows="5"
                         placeholder="Message"
                         required
-                        class="w-full text-gray-600 placeholder-gray-400 bg-transparent text-lg font-normal leading-7 rounded-lg border border-gray-200 focus:outline-none pl-4 pr-4 py-2 mb-6"
+                        class="w-full text-gray-600 placeholder-gray-400 shadow-sm bg-transparent text-lg font-normal leading-7 rounded-lg border border-gray-200 focus:outline-none pl-4 pr-4 py-2 mb-6"
                     >{{ old('textarea') }}</textarea>
                     @error('textarea')
                         <p class="mb-2 text-xs text-red-600">{{ $message }}</p>
