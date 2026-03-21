@@ -55,7 +55,7 @@
             <svg class="w-5 h-5 mt-0.5 text-gray-500 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
               <path fill="currentColor" d="M12 2.25c-3.728 0-6.75 3.022-6.75 6.75 0 4.981 5.32 9.905 6.03 10.54a1.25 1.25 0 0 0 1.44 0c.71-.635 6.03-5.559 6.03-10.54 0-3.728-3.022-6.75-6.75-6.75Zm0 9.25a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5Z" />
             </svg>
-            <span>Tadeusza Kościuszki 5, 62-400 Słupca</span>
+            <a href="https://maps.app.goo.gl/P1vnpYuSDKYEAd2U7" target="_blank" class="hover:text-white transition">Tadeusza Kościuszki 5, 62-400 Słupca</a>
           </p>
           <p class="flex items-center gap-2">
             <svg class="w-5 h-5 text-gray-500 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">

@@ -118,7 +118,7 @@
                                     <h5 class="text-white text-base font-normal leading-6 ml-5">kontakt@corpotech.com.pl</h5>
                                 </a>
 
-                                <a href="https://maps.app.goo.gl/P1vnpYuSDKYEAd2U7" class="flex items-center text-brand">
+                                <a href="https://maps.app.goo.gl/P1vnpYuSDKYEAd2U7" target="_blank" class="flex items-center text-brand">
                                     <svg
                                         width="30"
                                         height="30"
