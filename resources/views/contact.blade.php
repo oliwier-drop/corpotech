@@ -218,7 +218,7 @@
                         <div
                             class="cf-turnstile max-w-full"
                             data-sitekey="{{ env('TURNSTILE_SITE_KEY') }}"
-                            data-theme="light"
+                            data-theme="dark"
                             data-size="flexible"
                             data-callback="onTurnstileVerified"
                             data-expired-callback="onTurnstileExpired"
