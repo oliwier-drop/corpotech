@@ -1,5 +1,7 @@
 # Corpotech
 
+<img src="https://corpotech.com.pl/assets/images/logo/logo.png">
+
 Strona firmowa i panel administracyjny Corpotech oparty o Laravel 12 oraz Filament 3.
 
 ## Stack
