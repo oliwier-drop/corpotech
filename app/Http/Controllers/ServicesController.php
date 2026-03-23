@@ -9,22 +9,22 @@ class ServicesController extends Controller
 {
     public function cybersecurity(): View
     {
-        $recentInstallationPosts = $this->getRecentPostsByCategory(
+        $recentCybersecurityPosts = $this->getRecentPostsByCategory(
             ['cyberbezpieczenstwo', 'cybersecurity'],
             ['Cyberbezpieczenstwo', 'Cyberbezpieczeństwo', 'Cybersecurity']
         );
 
-        return view('services.cybersecurity', compact('recentInstallationPosts'));
+        return view('services.cybersecurity', compact('recentCybersecurityPosts'));
     }
 
     public function systems(): View
     {
-        $recentInstallationPosts = $this->getRecentPostsByCategory(
+        $recentSystemsPosts = $this->getRecentPostsByCategory(
             ['administracja-systemow', 'systems-administration'],
             ['Administracja systemow', 'Administracja systemów']
         );
 
-        return view('services.systems', compact('recentInstallationPosts'));
+        return view('services.systems', compact('recentSystemsPosts'));
     }
 
     public function smarthome(): View
@@ -49,12 +49,12 @@ class ServicesController extends Controller
 
     public function websites(): View
     {
-        $recentInstallationPosts = $this->getRecentPostsByCategory(
+        $recentWebsitePosts = $this->getRecentPostsByCategory(
             ['strony-internetowe', 'websites'],
             ['Strony internetowe', 'Websites']
         );
 
-        return view('services.websites', compact('recentInstallationPosts'));
+        return view('services.websites', compact('recentWebsitePosts'));
     }
 
     private function getRecentPostsByCategory(array $categorySlugs, array $categoryNames): \Illuminate\Database\Eloquent\Collection

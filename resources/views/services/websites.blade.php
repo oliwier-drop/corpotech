@@ -159,13 +159,13 @@
 </section>
 
 
-@if(isset($recentInstallationPosts) && $recentInstallationPosts->isNotEmpty())
-<section id="last-installations">
+@if(isset($recentWebsitePosts) && $recentWebsitePosts->isNotEmpty())
+<section id="last-realizations">
     <div class="container mx-auto px-4">
         
-        <h2 class="text-4xl font-bold text-white text-center">Nasze ostatnie instalacje</h2>
+        <h2 class="text-4xl font-bold text-white text-center">Nasze ostatnie realizacje</h2>
             <div class="mt-8 grid grid-cols-1 gap-8 lg:grid-cols-2 xl:grid-cols-3">
-                @foreach($recentInstallationPosts as $post)
+                @foreach($recentWebsitePosts as $post)
                     <a href="{{ route('post.show', ['slug' => $post->slug]) }}" class="group block overflow-hidden rounded-xl bg-brand-dark shadow-md transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl">
                         <img
                             src="{{ $post->image_path ? asset('storage/' . $post->image_path) : asset('assets/images/team/placeholder.png') }}"

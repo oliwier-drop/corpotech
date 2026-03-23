@@ -160,7 +160,7 @@
 
 
 @if(isset($recentSmartHomePosts) && $recentSmartHomePosts->isNotEmpty())
-<section id="last-smart-home">
+<section id="last-realizations">
     <div class="container mx-auto px-4">
         
         <h2 class="text-4xl font-bold text-white text-center">Nasze ostatnie realizacje</h2>
